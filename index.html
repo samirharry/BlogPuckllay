@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div style="align-content: center;">
+		<h1 style="position: relative;">Ejemplo del blog para subirlo</h1>
+	</div>
+	<div id="editorjs" style="margin-top: 100px; border-radius: 1px; border-width: 5px; "></div>
+	<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+	<script>
+		const editor = new EditorJS({
+			holder: 'editorjs',
+			tools:{
+				header:{
+					class: Header,
+					inlineToolbar: ['link']
+				},
+				list:{
+				class: List,
+				inlineToolbar: true
+				}
+			},
+			autofocus: true
+		})
+	</script>
+</body>
+</html>
